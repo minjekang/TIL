@@ -23,3 +23,31 @@ ReactDOM.render(
 ```
 
 위의 코드를 보면 element에 Welcome을 담고 있습니다. Welcome은 부모인 element에 있는 Sara를 props에 담아 내려받고 사용하고 있습니다.
+
+# state
+
+state는 사용자(클라이언트)와 더욱 dynamic 한 통신을 위해 만들어졌습니다. state는 컴포넌트의 특정 상태를 기억하여 화면에 반영하고, 상태가 사용자에 의해 변경되면 다시 화면이 변경되는 기능을 하기위해 존재는 객체입니다.
+state 객체를 사용하기 위해서는 부모를 상속받는 class를 생성하여 생성자로 사용해야 합니다.
+
+코드를 통해 예시를 알아보겠습니다.
+
+```
+class Clock extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {date: new Date()};
+  }
+
+  render() {
+    return (
+      <div>
+        <h1>Hello, world!</h1>
+        <h2>It is {this.state.date.toLocaleTimeString()}.</h2>
+      </div>
+    );
+  }
+}
+```
+
+위의 코드를 보면 시간이 변할 때 마다 화면을 업데이트해 주는 코드를 볼 수 있습니다.
+이때 시간은 계속해서 변하는 상태 값이기 때문에 state 객체 안에 넣어줌으로써 상태를 관리할 수 있습니다. 이 외에도 onclick 이벤트의 클릭 정보를 저장하거나 하는 등의 방식으로 state를 사용하여 좀 더 많은 기능을 페이지에 추가할 수 있습니다.
