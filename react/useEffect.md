@@ -17,7 +17,7 @@ useEffect는 콜백을 부르고, 렌더링 혹은 값, 오브젝트의 변경�
 
 #### 리액트 컴포넌트가 렌더링 될 때마다 특정 작업을 실행할 수 있도록 하는 Hook 이다.
 
-![ex_screenshot](images/useEffect.PNG)
+![ex_screenshot](../images/useEffect.PNG)
 
 #### useEffect는 component가 mount 됐을 때, component가 unmount 됐을 때, component가 update 됐을 때, 특정 작업을 처리할 수 있다.
 
