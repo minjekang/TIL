@@ -2,4 +2,5 @@
 
 [useEffect](./react/useEffect.md) |
 [props](./react/props&state.md) |
-[state](./react/props&state.md)
+[state](./react/props&state.md) |
+[variable](./Sass/variable.md)
