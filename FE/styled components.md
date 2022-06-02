@@ -25,3 +25,31 @@ button {
 이런 식으로 Styled Components를 이용해서 JavaScript 코드 안에 삽입된 CSS 코드는 글로벌 네임 스페이스를 사용하지 않는다. 다시 말해, 각 JavaScript 파일마다 고유한 CSS 네임 스페이스를 부여해주기 때문에, 각 React 컴포넌트에 완전히 격리된 스타일을 적용할 수 있게 된다.
 
 이 것은 순수하게 CSS만을 사용했을 때는 누리기 어려웠던 대표적인 CSS in JS의 장점 중 하나이다.
+
+```CSS
+import React from "react";
+import styled from "styled-components";
+
+const StyledButton = styled.button`
+  padding: 0.375rem 0.75rem;
+  border-radius: 0.25rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  border: 1px solid lightgray;
+  color: gray;
+  backgroud: white;
+`;
+
+function Button({ children }) {
+  return <StyledButton>{children}</StyledButton>;
+}
+```
+
+다른 컴포넌트에서
+
+```CSS
+import Button from "./Button";
+<Button>Default Button</Button>;
+```
+
+이렇게 사용할 수 있다.
