@@ -1,4 +1,4 @@
-# Today I Learn
+# Today I Learn.
 
 [useEffect](./FE/useEffect.md) |
 [props](./FE/props%26state.md) |
