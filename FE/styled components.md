@@ -53,3 +53,7 @@ import Button from "./Button";
 ```
 
 이렇게 사용할 수 있다.
+
+import \* as S from "./style";
+이렇게 import해서
+<S.Btn/> 이런식으로 쓸 수도 있다.
